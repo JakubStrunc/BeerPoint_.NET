@@ -2,6 +2,7 @@ using PNET_semestralka_blazor_app.Components;
 using PNET_semestralka_blazor_app.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using PNET_semestralka_blazor_app.Models;
 
 namespace PNET_semestralka_blazor_app
 {
@@ -18,9 +19,23 @@ namespace PNET_semestralka_blazor_app
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
             var controllerTypes = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(t => t.IsClass && !t.IsAbstract && t.Name.EndsWith("Controller"));
+
+            builder.Services.AddDistributedMemoryCache(); // required for sessions
+
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            builder.Services.AddHttpContextAccessor(); // to access HttpContext
+
+            builder.Services.AddScoped<Session>();
 
             foreach (var type in controllerTypes)
             {
@@ -38,8 +53,9 @@ namespace PNET_semestralka_blazor_app
             }
 
             app.UseHttpsRedirection();
-
             app.UseStaticFiles();
+            app.UseRouting();
+            app.UseSession();
             app.UseAntiforgery();
 
             app.MapRazorComponents<App>()

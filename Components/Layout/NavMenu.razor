@@ -1,4 +1,6 @@
 ﻿@inject NavigationManager Navigation
+@using PNET_semestralka_blazor_app.Models;
+@inject Session session
 
 @* <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
@@ -69,12 +71,30 @@
         <div class="d-none d-lg-flex">
             <div class="d-flex ms-auto">
                 <ul class="nav">
-                    <li><NavLink class="nav-link px-2 text-white">Home</NavLink></li>
-                    <li><NavLink class="nav-link px-2 text-white">Košík</NavLink></li>
-                    <li><NavLink class="nav-link px-2 text-white">Objednávky</NavLink></li>
+                    @if(!session.IsLoggedIn)
+                    {
+                        <button type="button" class="btn btn-light mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Login
+                        </button>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Create account
+                        </button>
+                    }
+                    else if (session.Role == "Customer")
+                    {
+                        <li><NavLink class="nav-link px-2 text-white">Home</NavLink></li>
+                        <li><NavLink class="nav-link px-2 text-white">Košík</NavLink></li>
+                        <li><NavLink class="nav-link px-2 text-white">Objednávky</NavLink></li>
+                    }
+                    else if (session.Role == "Seller")
+                    {
+                        <li><NavLink class="nav-link px-2 text-white">Home</NavLink></li>
+                        <li><NavLink class="nav-link px-2 text-white">Správa produktů</NavLink></li>
+                        <li><NavLink class="nav-link px-2 text-white">Správa Objednávek</NavLink></li>
+                    }
+                    
 
-                    <li><NavLink class="nav-link px-2 text-white">Správa produktů</NavLink></li>
-                    <li><NavLink class="nav-link px-2 text-white">Správa Objednávek</NavLink></li>
+                    
 
                 </ul>
             </div>
