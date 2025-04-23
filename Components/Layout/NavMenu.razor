@@ -1,0 +1,88 @@
+﻿@inject NavigationManager Navigation
+
+@* <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">
+            <img src="img/Logo.png" style="height: 40px;" class="me-2" alt="Logo" />
+            BeerPoint
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                @if (userRole == "Guest")
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="">Domů</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="login">Přihlásit</NavLink>
+                    </li>
+                }
+                else if (userRole == "Customer")
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="">Domů</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="cart">Košík</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="orders">Objednávky</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="logout">Odhlásit</NavLink>
+                    </li>
+                }
+                else if (userRole == "Seller")
+                {
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="">Domů</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="products">Správa produktů</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="orders-managing">Správa objednávek</NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="logout">Odhlásit</NavLink>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav> *@
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/Logo.png"
+                 class="bd-placeholder-img"
+                 style="width: auto; height: 50px; object-fit: cover"
+                 alt="logo" />
+            BeerPoint
+        </a>
+        <div class="d-none d-lg-flex">
+            <div class="d-flex ms-auto">
+                <ul class="nav">
+                    <li><NavLink class="nav-link px-2 text-white">Home</NavLink></li>
+                    <li><NavLink class="nav-link px-2 text-white">Košík</NavLink></li>
+                    <li><NavLink class="nav-link px-2 text-white">Objednávky</NavLink></li>
+
+                    <li><NavLink class="nav-link px-2 text-white">Správa produktů</NavLink></li>
+                    <li><NavLink class="nav-link px-2 text-white">Správa Objednávek</NavLink></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    // Prozatím demo role (nahraď podle skutečného přihlášení)
+    string userRole = "Customer"; // Může být "Guest", "Customer", "Seller"
+}

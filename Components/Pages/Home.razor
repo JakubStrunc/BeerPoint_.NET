@@ -1,0 +1,75 @@
+﻿@page "/"
+@using PNET_semestralka_blazor_app.Controllers
+@using PNET_semestralka_blazor_app.Models
+@inject HomeController HomeService
+
+<PageTitle>Home</PageTitle>
+
+
+
+<section class="py-5 mt-5" style="min-height: 90vh;">
+    <div class="container text-center">
+        @if (errorMessage != null)
+        {
+            <div class="alert alert-danger">@errorMessage</div>
+        }
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            @if (products == null && errorMessage == null)
+            {
+                <p>Načítám...</p>
+            }
+            else if (products?.Any() == true)
+            {
+                @foreach (var product in products)
+                {
+                    <div class="col">
+                        <div class="card h-100 p-3">
+                            <img src="img/produkty/@product.Photo"
+                                 alt="@product.Nazev"
+                                 class="card-img-top"
+                                 style="height: 200px; object-fit: cover;" />
+                            <div class="card-body text-start">
+                                <h5 class="card-title">@product.Nazev</h5>
+                                <p class="card-text">@product.Popis</p>
+                                <p class="text-success fw-bold">@product.Cena.ToString("N0") Kč</p>
+                            </div>
+                            <div class="card-footer bg-transparent text-end">
+                                <button class="btn btn-warning" @onclick="() => PridatDoKosiku(product.Id)">
+                                    Přidat do košíku
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else if (products?.Any() == false)
+            {
+                <p>Žádné produkty k zobrazení</p>
+            }
+        </div>
+    </div>
+</section>
+
+@code {
+    private List<Product>? products;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            products = await HomeService.GetAllProductsAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Chyba při načítání produktů: " + ex.Message;
+        }
+    }
+
+    private void PridatDoKosiku(int productId)
+    {
+        // Logika pro přidání do košíku (budeš přidávat později)
+    }
+}
+
