@@ -2,12 +2,14 @@
 using PNET_semestralka_blazor_app.Data;
 using PNET_semestralka_blazor_app.Models;
 using Microsoft.EntityFrameworkCore;
+using PNET_semestralka_blazor_app.Migrations;
 
 namespace PNET_semestralka_blazor_app.Controllers
 {
     public class HomeController : Controller
     {
         private ApplicationDbContext _context;
+
 
         public HomeController(ApplicationDbContext context)
         {

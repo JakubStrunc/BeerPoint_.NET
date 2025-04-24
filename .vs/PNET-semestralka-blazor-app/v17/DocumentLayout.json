@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\pages\\home.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\modals\\loginmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\modals\\loginmodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\modals\\registermodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\modals\\registermodal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,16 +59,8 @@
       "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BBE2696-AEF4-45BE-95CE-8842EB7323BC}|PNET-semestralka-blazor-app.csproj|c:\\users\\kubae\\onedrive\\dokumenty\\pnet-semestralka-blazor-app\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -98,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,20 +122,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCMAAABPAAAA",
+              "DocumentIndex": 0,
+              "Title": "Home.razor.cs",
+              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Pages\\Home.razor.cs",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor.cs",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Pages\\Home.razor.cs*",
+              "RelativeToolTip": "Components\\Pages\\Home.razor.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-23T07:36:51.762Z",
+              "WhenOpened": "2025-04-24T07:07:11.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-24T07:04:50.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginModal.razor",
+              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Modals\\LoginModal.razor",
+              "RelativeDocumentMoniker": "Components\\Modals\\LoginModal.razor",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Modals\\LoginModal.razor",
+              "RelativeToolTip": "Components\\Modals\\LoginModal.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T19:51:58.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -132,33 +174,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAAAFAAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-23T07:39:33.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
               "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\MainLayout.razor",
               "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-23T07:39:20.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "MyDatabase.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\MyDatabase.cs",
               "RelativeDocumentMoniker": "Models\\MyDatabase.cs",
@@ -171,20 +213,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Pages\\Home.razor*",
               "RelativeToolTip": "Components\\Pages\\Home.razor*",
-              "ViewState": "AQIAADUAAAAAAAAAAAAcwBUAAAAJAAAA",
+              "ViewState": "AQIAAHwAAAAAAAAAAADgv30AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-23T08:40:08.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwBwAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T09:22:12.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterModal.razor",
+              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Modals\\RegisterModal.razor",
+              "RelativeDocumentMoniker": "Components\\Modals\\RegisterModal.razor",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Modals\\RegisterModal.razor",
+              "RelativeToolTip": "Components\\Modals\\RegisterModal.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T19:52:28.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Weather.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Pages\\Weather.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Weather.razor",
@@ -197,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Session.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\Session.cs",
               "RelativeDocumentMoniker": "Models\\Session.cs",
@@ -210,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
@@ -223,7 +291,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCMAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-23T07:36:51.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "SendingAddress.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\SendingAddress.cs",
               "RelativeDocumentMoniker": "Models\\SendingAddress.cs",
@@ -236,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -249,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "ApplicationDbContextSeed.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Data\\ApplicationDbContextSeed.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContextSeed.cs",
@@ -262,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Routes.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "Components\\Routes.razor",
@@ -275,20 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\App.razor",
-              "RelativeDocumentMoniker": "Components\\App.razor",
-              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\App.razor",
-              "RelativeToolTip": "Components\\App.razor",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAABkAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-23T09:22:12.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Components\\_Imports.razor",
@@ -301,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Error.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Pages\\Error.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Error.razor",
@@ -314,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "PNET-semestralka-blazor-app",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\PNET-semestralka-blazor-app.csproj",
               "RelativeDocumentMoniker": "PNET-semestralka-blazor-app.csproj",
@@ -327,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -340,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
@@ -353,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "Models\\OrderItem.cs",
@@ -366,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Models\\Order.cs",
               "RelativeDocumentMoniker": "Models\\Order.cs",
@@ -379,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",

@@ -17,7 +17,7 @@ namespace PNET_semestralka_blazor_app.Migrations
 
         public List<Product> GetAllProducts()
         {
-            return _context.Products.Include(p => p.Seller).ToList();
+            return await _context.Products.Include(p => p.Seller).ToListAsync();
         }
 
         public List<Order> GetOrdersByCustomerId(int customerId)

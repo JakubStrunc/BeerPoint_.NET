@@ -1,0 +1,36 @@
+﻿<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registrace</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+            </div>
+            <div class="modal-body">
+                <EditForm Model="@registerModel" OnValidSubmit="HandleRegister">
+                    <InputText class="form-control mb-2" @bind-Value="registerModel.Email" placeholder="Email" />
+                    <InputText type="password" class="form-control mb-2" @bind-Value="registerModel.Password" placeholder="Heslo" />
+                    <InputText type="password" class="form-control mb-2" @bind-Value="registerModel.ConfirmPassword" placeholder="Potvrdit heslo" />
+                    <button type="submit" class="btn btn-success w-100">Registrovat</button>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegisterModel registerModel = new();
+
+    public class RegisterModel
+    {
+        public string Email { get; set; } = "";
+        public string Password { get; set; } = "";
+        public string ConfirmPassword { get; set; } = "";
+    }
+
+    private Task HandleRegister()
+    {
+        // TODO: Napoj na registraci
+        Console.WriteLine($"Registrace: {registerModel.Email}");
+        return Task.CompletedTask;
+    }
+}

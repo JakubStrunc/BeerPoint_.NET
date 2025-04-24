@@ -1,11 +1,16 @@
 ﻿@page "/"
+@using PNET_semestralka_blazor_app.Components.Modals
 @using PNET_semestralka_blazor_app.Controllers
 @using PNET_semestralka_blazor_app.Models
 @inject HomeController HomeService
 @inject Session session
 
+
+
 <PageTitle>Home</PageTitle>
 
+<LoginModal />
+<RegisterModal />
 
 @if (session.UserEmail != null)
 {
@@ -118,25 +123,5 @@ else
     </div>
 </section>
 
-@code {
-    private List<Product>? products;
-    private string? errorMessage;
 
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            products = await HomeService.GetAllProductsAsync();
-        }
-        catch (Exception ex)
-        {
-            errorMessage = "Chyba při načítání produktů: " + ex.Message;
-        }
-    }
-
-    private void PridatDoKosiku(int productId)
-    {
-        // Logika pro přidání do košíku (budeš přidávat později)
-    }
-}
 

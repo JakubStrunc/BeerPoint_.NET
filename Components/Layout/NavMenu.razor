@@ -74,10 +74,12 @@
                     @if(!session.IsLoggedIn)
                     {
                         <button type="button" class="btn btn-light mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Login
+                            Přihlásit se
                         </button>
+
+                        <!-- Zobrazí register modál -->
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#registerModal">
-                            Create account
+                            Zaregistrovat se
                         </button>
                     }
                     else if (session.Role == "Customer")
