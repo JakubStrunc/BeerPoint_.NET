@@ -4,6 +4,7 @@
 @using PNET_semestralka_blazor_app.Models
 @inject HomeController HomeService
 @inject Session session
+@inject IJSRuntime JSRuntime
 
 
 
@@ -34,7 +35,7 @@ else
                     <!-- Produkty -->
                      @foreach (var product in products)
                     {
-                        <div class="col" data-aos="fade-up">
+                        <div class="col">
                             <div class="card d-flex flex-column" style="min-height: 68vh; max-height: 68vh;padding: 1rem;">
                                 <div class="card-body text-center">
                                     <!-- Obraz produktu -->
@@ -62,9 +63,10 @@ else
 
                                     @if(session.Role == "Customer")
                                     {
-                                    <!-- Pridat do kosiku btn -->
-                                    <input type="button" value="Přidat do košíku"
-                                           class="btn btn-warning add-to-cart-btn" data-product-id="@product.Id">
+                                        <button @onclick="() => PridatDoKosiku(product)"
+                                                class="btn btn-warning">
+                                            Přidat do košíku
+                                        </button>
                                     }
 
                                 </div>

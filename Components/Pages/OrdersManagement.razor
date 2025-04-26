@@ -1,0 +1,176 @@
+﻿@page "/orders-management"
+@using PNET_semestralka_blazor_app.Controllers
+@using PNET_semestralka_blazor_app.Models
+@inject OrdersManagementController OrdersManagementService
+@inject Session session
+
+<section class="mt-5 py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-xl-10 col-xl-12">
+                <div class="card shadow-sm mb-3 p-3 d-flex flex-column" style="min-height: 88vh;">
+                    @if (orders == null)
+                    {
+                        <p>Načítám...</p>
+                    }
+                    else if (!orders.Any())
+                    {
+                        <div class="text-center" id="error_objednavky">
+                            <h3>HMM...</h3>
+                            <p>Vypadá to, že jste si nic neobjednal zatím.</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="flex-grow-1 mb-5">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Číslo objednávky</th>
+                                        <th>Jméno</th>
+                                        <th>Příjmení</th>
+                                        <th>Adresa</th>
+                                        <th>Stav</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var order in orders)
+                                    {
+                                        <tr id="order_tab_tr_@order.Id">
+                                            <th>@order.Id</th>
+                                            <td>@order.Jmeno</td>
+                                            <td>@order.Prijmeni</td>
+                                            <td>
+                                                @order.Ulice @order.PopisneCislo/@order.OrientacniCislo, @order.Psc, @order.Mesto
+                                            </td>
+                                            <td>
+                                                <InputSelect class="form-select-sm"
+                                                             @bind-Value="order.Stav"
+                                                             onchange="@(() => UpdateStatus(order))">
+                                                    <option value="zpracovává se">Zpracovává se</option>
+                                                    <option value="odesláno">Odesláno</option>
+                                                    <option value="doručeno">Doručeno</option>
+                                                    <option value="zrušeno">Zrušeno</option>
+                                                </InputSelect>
+                                            </td>
+                                            <td>
+                                                <a href="#" class="text-warning fw-bold"
+                                                   @onclick="() => ToggleOrder(order.Id)"
+                                                   @onclick:preventDefault="true"
+                                                   style="font-size: 24px;">
+                                                    <i class="bi @(expandedOrders.ContainsKey(order.Id) && expandedOrders[order.Id] ? "bi-caret-up-fill" : "bi-caret-down-fill")"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        @if (expandedOrders.ContainsKey(order.Id) && expandedOrders[order.Id])
+                                        {
+                                            <tr>
+                                                <td colspan="6">
+                                                    <div class="card card-body">
+                                                        <h6>Produkty objednávky:</h6>
+                                                        <table class="table">
+                                                            <tbody>
+                                                                @foreach (var item in order.OrderItems)
+                                                                {
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="@($"img/produkty/{item.Product.Photo}")"
+                                                                                 alt="@item.Product.Nazev"
+                                                                                 class="bd-placeholder-img card-img-top"
+                                                                                 style="width: auto; height: 150px; object-fit: cover;">
+                                                                        </td>
+                                                                        <td>
+                                                                            <h5 class="card-title mt-5">@item.Product.Nazev</h5>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p class="card-text fw-bold mt-5">@item.Pocet x @item.Product.Cena Kč</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <p class="card-text text-success fw-bold mt-5 text-end" style="padding-right: 20px;">@(item.Pocet * item.Product.Cena) Kč</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                }
+                                                                <tr>
+                                                                    <td colspan="3"></td>
+                                                                    <td class="text-success fw-bold text-end me-5" style="font-size: 1.2em; padding-right: 20px;">
+                                                                        Celkem: @order.OrderItems.Sum(x => x.Pocet * x.Product.Cena) Kč
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@code {
+    private List<Order>? orders;
+    private string? errorMessage;
+
+
+    private Dictionary<int, bool> expandedOrders = new();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            if (!session.IsLoggedIn)
+            {
+                errorMessage = "Nejste přihlášen.";
+                return;
+            }
+
+            orders = await OrdersManagementService.GetAllOrdersAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Chyba při načítání objednávek: " + ex.Message;
+        }
+    }
+
+    private void ToggleOrder(int orderId)
+    {
+
+        Console.WriteLine("Click");
+        if (expandedOrders.ContainsKey(orderId))
+        {
+            expandedOrders[orderId] = !expandedOrders[orderId];
+        }
+        else
+        {
+            expandedOrders[orderId] = true;
+        }
+    }
+
+    private async Task UpdateStatus(Order order)
+    {
+        try
+        {
+            // Tady bys zavolal službu a aktualizoval stav v databázi
+            await OrdersManagementService.UpdateOrderStatusAsync(order.Id, order.Stav);
+
+            Console.WriteLine($"Stav objednávky {order.Id} změněn na {order.Stav}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Chyba při aktualizaci stavu: {ex.Message}");
+        }
+    }
+
+
+
+}
+

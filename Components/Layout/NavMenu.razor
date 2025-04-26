@@ -33,14 +33,26 @@
                         <li><NavLink class="nav-link px-2 text-white" href="/">Home</NavLink></li>
                         <li><NavLink class="nav-link px-2 text-white" href="/cart">Košík</NavLink></li>
                         <li><NavLink class="nav-link px-2 text-white" href="/orders">Objednávky</NavLink></li>
-                        <li><a class="nav-link px-2 text-danger" @onclick="Logout" href="#">Odhlásit se</a></li>
+                        <li>
+                            <button class="nav-link px-2 text-danger bg-transparent border-0"
+                                    @onclick="Logout"
+                                    @onclick:preventDefault>
+                                Odhlásit se
+                            </button>
+                        </li>
                     }
                     else if (session.Role == "Seller")
                     {
                         <li><NavLink class="nav-link px-2 text-white" href="/">Home</NavLink></li>
-                        <li><NavLink class="nav-link px-2 text-white" href="/products">Správa produktů</NavLink></li>
-                        <li><NavLink class="nav-link px-2 text-white" href="/order-management">Správa Objednávek</NavLink></li>
-                        <li><a class="nav-link px-2 text-danger" @onclick="Logout" href="#">Odhlásit se</a></li>
+                        <li><NavLink class="nav-link px-2 text-white" href="/products-management">Správa produktů</NavLink></li>
+                        <li><NavLink class="nav-link px-2 text-white" href="/orders-management">Správa Objednávek</NavLink></li>
+                        <li>
+                            <button class="nav-link px-2 text-danger bg-transparent border-0"
+                                    @onclick="Logout"
+                                    @onclick:preventDefault>
+                                Odhlásit se
+                            </button>
+                        </li>
                     }
                 </ul>
             </div>
@@ -48,12 +60,24 @@
     </div>
 </nav>
 
+
 @code {
-    private async Task Logout()
-    {
-        Console.WriteLine("Odhlaseni");
-        await SignInManager.SignOutAsync();
-        session.Clear();
-        Navigation.NavigateTo("/", forceLoad: true);
-    }
+        private async Task Logout()
+        {
+            try
+            {
+                Console.WriteLine("Začínám logout");
+
+                await SignInManager.SignOutAsync();
+                session.Clear();
+
+                Console.WriteLine("Naviguju na Home");
+
+                Navigation.NavigateTo("/", forceLoad: true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Chyba při logoutu: {ex.Message}");
+            }
+        }
 }

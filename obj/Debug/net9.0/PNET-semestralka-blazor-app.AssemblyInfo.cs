@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PNET-semestralka-blazor-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19a715792119a848ce75e66dc6186e1d7af60775")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62bf6611b2ae4ddb851cc8e8dd6ee47ae317573")]
 [assembly: System.Reflection.AssemblyProductAttribute("PNET-semestralka-blazor-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PNET-semestralka-blazor-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
