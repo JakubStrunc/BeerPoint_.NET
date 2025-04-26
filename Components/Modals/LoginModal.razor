@@ -1,4 +1,12 @@
-﻿<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+﻿@using PNET_semestralka_blazor_app.Models;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+@inject Session Session
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -6,10 +14,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
             </div>
             <div class="modal-body">
-                <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+                <EditForm Model=@loginModel OnSubmit=@HandleLogin FormName="loginForm">
                     <InputText class="form-control mb-3" @bind-Value="loginModel.Email" placeholder="Email" />
                     <InputText type="password" class="form-control mb-3" @bind-Value="loginModel.Password" placeholder="Heslo" />
                     <button type="submit" class="btn btn-warning w-100">Přihlásit</button>
+                    <input type="submit" value="Přihlásit" class="btn btn-warning" />
                 </EditForm>
             </div>
         </div>
@@ -17,18 +26,48 @@
 </div>
 
 @code {
-    private LoginModel loginModel = new();
 
-    public class LoginModel
+
+
+    [SupplyParameterFromForm]
+    private LoginModelForm? loginModel { get; set; }
+
+    private string? loginError;
+
+    
+    public class LoginModelForm
     {
         public string Email { get; set; } = "";
         public string Password { get; set; } = "";
     }
 
-    private Task HandleLogin()
+    protected override void OnInitialized() => loginModel ??= new();
+
+    private async Task HandleLogin()
     {
-        // TODO: Napoj na ASP.NET Identity nebo session
-        Console.WriteLine($"Přihlášení: {loginModel.Email}");
-        return Task.CompletedTask;
+        loginError = null;
+
+        Console.WriteLine($"Zkouším přihlásit: {loginModel.Email} s heslem: {loginModel.Password}");
+        var result = await SignInManager.PasswordSignInAsync(loginModel.Email, loginModel.Password, isPersistent: true, lockoutOnFailure: false);
+
+        if (result.Succeeded)
+        {
+
+            Console.WriteLine("Přihlášení úspěšné");
+            var user = await UserManager.FindByEmailAsync(loginModel.Email);
+            var roles = await UserManager.GetRolesAsync(user);
+
+            // Ulož do vlastní Session
+            Session.UserEmail = user.Email;
+            Session.Role = roles.FirstOrDefault() ?? "Customer";
+
+            // Přesměruj (refresh)
+            Nav.NavigateTo("/", forceLoad: true);
+        }
+        else
+        {
+            Console.WriteLine("Přihlášení selhalo");
+            loginError = "Neplatné přihlašovací údaje.";
+        }
     }
 }

@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\PNET-semestralka-blazor-app.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PNET-semestralka-blazor-app.akgo28oaia.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\Logo.png",
+      "PackagePath": "staticwebassets\\img\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\backgroundbeeropoint.jpg",
+      "PackagePath": "staticwebassets\\img\\backgroundbeeropoint.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\Birell_Pomelo&Grep_sud.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\Birell_Pomelo&Grep_sud.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\exelent.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\exelent.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\gambrinus.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\gambrinus.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\gambrinus_10_prepravka.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\gambrinus_10_prepravka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\gambrinus_11.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\gambrinus_11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\gambrinus_12_prepravka.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\gambrinus_12_prepravka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\kozel_prepravka.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\kozel_prepravka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\kozel_sud.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\kozel_sud.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\pilsner_prepravka.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\pilsner_prepravka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\wwwroot\\img\\produkty\\radegast_12_sud.jpg",
+      "PackagePath": "staticwebassets\\img\\produkty\\radegast_12_sud.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.PNET-semestralka-blazor-app.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.PNET-semestralka-blazor-app.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.PNET-semestralka-blazor-app.props",
+      "PackagePath": "build\\PNET-semestralka-blazor-app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.PNET-semestralka-blazor-app.props",
+      "PackagePath": "buildMultiTargeting\\PNET-semestralka-blazor-app.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.PNET-semestralka-blazor-app.props",
+      "PackagePath": "buildTransitive\\PNET-semestralka-blazor-app.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

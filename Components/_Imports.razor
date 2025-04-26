@@ -8,3 +8,21 @@
 @using Microsoft.JSInterop
 @using PNET_semestralka_blazor_app
 @using PNET_semestralka_blazor_app.Components
+
+
+@using PNET_semestralka_blazor_app.Models;
+@using Microsoft.AspNetCore.Identity
+@inject Session session
+@inject SignInManager<ApplicationUser> SignInManager
+@using PNET_semestralka_blazor_app.Components.Modals
+@using PNET_semestralka_blazor_app.Controllers
+@using PNET_semestralka_blazor_app.Models
+@inject HomeController HomeService
+@inject Session session
+@using PNET_semestralka_blazor_app.Models;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+@inject Session Session

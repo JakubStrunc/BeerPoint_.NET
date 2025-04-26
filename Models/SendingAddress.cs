@@ -25,8 +25,8 @@ namespace PNET_semestralka_blazor_app.Models
         [StringLength(45)]
         public string Mesto { get; set; }
 
-        public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public string CustomerId { get; set; }
+        public ApplicationUser? Customer { get; set; }
     }
 }
 

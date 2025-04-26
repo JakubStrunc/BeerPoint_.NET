@@ -3,12 +3,16 @@ using PNET_semestralka_blazor_app.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using PNET_semestralka_blazor_app.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
+
 
 namespace PNET_semestralka_blazor_app
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +27,18 @@ namespace PNET_semestralka_blazor_app
             var controllerTypes = Assembly.GetExecutingAssembly()
                 .GetTypes()
                 .Where(t => t.IsClass && !t.IsAbstract && t.Name.EndsWith("Controller"));
+
+
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+            })
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             builder.Services.AddDistributedMemoryCache(); // required for sessions
 
@@ -55,8 +71,29 @@ namespace PNET_semestralka_blazor_app
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseAuthentication(); // <<< pøidat
+            app.UseAuthorization();  // <<< pøidat
             app.UseSession();
             app.UseAntiforgery();
+
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                try
+                {
+                    var context = services.GetRequiredService<ApplicationDbContext>();
+                    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+                    await ApplicationDbContextSeed.SeedDataAsync(context, userManager, roleManager);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Chyba pøi seedování dat: {ex.Message}");
+                }
+            }
 
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();

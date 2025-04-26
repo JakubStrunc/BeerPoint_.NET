@@ -21,8 +21,8 @@ namespace PNET_semestralka_blazor_app.Models
         public ICollection<OrderItem> OrderItems { get; set; }
 
 
-        public int SellerId { get; set; }
-        public Seller Seller { get; set; }
+        public string SellerId { get; set; }
+        public ApplicationUser? Seller { get; set; }
     }
 
 }

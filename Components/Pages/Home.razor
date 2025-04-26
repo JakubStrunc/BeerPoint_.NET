@@ -12,7 +12,7 @@
 <LoginModal />
 <RegisterModal />
 
-@if (session.UserEmail != null)
+@if (session.IsLoggedIn)
 {
     <p>Welcome, @session.UserEmail! (@session.Role)</p>
 }
@@ -20,51 +20,6 @@ else
 {
     <p>Not logged in.</p>
 }
-
-@* <section class="py-5 mt-5" style="min-height: 90vh;">
-    <div class="container text-center">
-        @if (errorMessage != null)
-        {
-            <div class="alert alert-danger">@errorMessage</div>
-        }
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-            @if (products == null && errorMessage == null)
-            {
-                <p>Načítám...</p>
-            }
-            else if (products?.Any() == true)
-            {
-                @foreach (var product in products)
-                {
-                    <div class="col">
-                        <div class="card h-100 p-3">
-                            <img src="img/produkty/@product.Photo"
-                                 alt="@product.Nazev"
-                                 class="card-img-top"
-                                 style="height: 200px; object-fit: cover;" />
-                            <div class="card-body text-start">
-                                <h5 class="card-title">@product.Nazev</h5>
-                                <p class="card-text">@product.Popis</p>
-                                <p class="text-success fw-bold">@product.Cena.ToString("N0") Kč</p>
-                            </div>
-                            <div class="card-footer bg-transparent text-end">
-                                <button class="btn btn-warning" @onclick="() => PridatDoKosiku(product.Id)">
-                                    Přidat do košíku
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                }
-            }
-            else if (products?.Any() == false)
-            {
-                <p>Žádné produkty k zobrazení</p>
-            }
-        </div>
-    </div>
-</section> *@
-
 
 <section class="py-5 mt-5" style="display: flex; flex-direction: column; min-height: 90vh; margin: 0;">
     <div class="text-center">
@@ -105,9 +60,12 @@ else
                                         @product.Cena Kč
                                     </p>
 
+                                    @if(session.Role == "Customer")
+                                    {
                                     <!-- Pridat do kosiku btn -->
                                     <input type="button" value="Přidat do košíku"
                                            class="btn btn-warning add-to-cart-btn" data-product-id="@product.Id">
+                                    }
 
                                 </div>
                             </div>

@@ -1,39 +1,17 @@
 
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace PNET_semestralka_blazor_app.Models
 {
-    public class User
+    public class ApplicationUser : IdentityUser
     {
-        [Key]
-        public int Id { get; set; }
-
-        [StringLength(45)]
-        public string UzivatelskeJmeno { get; set; }
-
-        [StringLength(45)]
-        public string Email { get; set; }
-
-        [StringLength(45)]
-        public string Heslo { get; set; }
-
         
-    }
-    public class Seller : User
-    {
-        public ICollection<Product>? Products { get; set; }
-
-        
-    }
-
-    public class Customer : User
-    {
-
-        public ICollection<SendingAddress>? ShippingDetails { get; set; }
-
+        // Pokud je zákazník
         public ICollection<Order>? Orders { get; set; }
+        public ICollection<SendingAddress>? SendingAddresses { get; set; }
 
-
+        // Pokud je prodejce
+        public ICollection<Product>? Products { get; set; }
     }
-
 }

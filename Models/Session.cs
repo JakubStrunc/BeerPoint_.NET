@@ -21,6 +21,12 @@
             set => _httpContextAccessor.HttpContext?.Session.SetString("UserRole", value ?? "");
         }
 
+        public void Clear()
+        {
+            _httpContextAccessor.HttpContext?.Session.Remove("UserEmail");
+            _httpContextAccessor.HttpContext?.Session.Remove("UserRole");
+        }
+
         public bool IsLoggedIn => !string.IsNullOrEmpty(UserEmail);
     }
 

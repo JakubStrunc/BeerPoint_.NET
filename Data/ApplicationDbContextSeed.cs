@@ -1,9 +1,10 @@
-﻿using PNET_semestralka_blazor_app.Data;
+﻿using Microsoft.AspNetCore.Identity;
+using PNET_semestralka_blazor_app.Data;
 using PNET_semestralka_blazor_app.Models;
 
 public static class ApplicationDbContextSeed
 {
-    public static void SeedData(ApplicationDbContext context)
+    public static async Task SeedDataAsync(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
     {
         // Automaticky vygeneruje databázi, pokud neexistuje
         context.Database.EnsureCreated();
@@ -11,24 +12,35 @@ public static class ApplicationDbContextSeed
         // Pokud už jsou data, ukonči
         if (context.Users.Any()) return;
 
-        // Prodejce
-        var seller = new Seller
+
+
+        if (!await roleManager.RoleExistsAsync("Customer"))
+            await roleManager.CreateAsync(new IdentityRole("Customer"));
+
+        if (!await roleManager.RoleExistsAsync("Seller"))
+            await roleManager.CreateAsync(new IdentityRole("Seller"));
+
+        // Prodejce (seller)
+        var seller = new ApplicationUser
         {
-            UzivatelskeJmeno = "pivnice123",
+            UserName = "pivo@shop.cz",
             Email = "pivo@shop.cz",
-            Heslo = "heslo123",
-            Products = new List<Product>()
+            EmailConfirmed = true
         };
 
-        // Zákazník
-        var customer = new Customer
+        await userManager.CreateAsync(seller, "heslo123");
+        await userManager.AddToRoleAsync(seller, "Seller");
+
+        // Zákazník (customer)
+        var customer = new ApplicationUser
         {
-            UzivatelskeJmeno = "jan.novak",
+            UserName = "jan@novak.cz",
             Email = "jan@novak.cz",
-            Heslo = "tajneheslo",
-            ShippingDetails = new List<SendingAddress>(),
-            Orders = new List<Order>()
+            EmailConfirmed = true
         };
+
+        await userManager.CreateAsync(customer, "heslo123");
+        await userManager.AddToRoleAsync(customer, "Customer");
 
         // Adresa zákazníka
         var address = new SendingAddress
@@ -193,11 +205,10 @@ public static class ApplicationDbContextSeed
 
 		context.Orders.AddRange(orders);
 
-		// Uložení do databáze
-		context.Users.Add(seller);
-        context.Users.Add(customer);
+        
         context.SendingAddress.Add(address);
-        context.SaveChanges();
+
+        await context.SaveChangesAsync();
     }
 
 }

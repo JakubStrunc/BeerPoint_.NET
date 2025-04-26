@@ -1,13 +1,13 @@
-﻿
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PNET_semestralka_blazor_app.Models;
 
 
 namespace PNET_semestralka_blazor_app.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<User> Users{ get; set; }
+        //public DbSet<ApplicationUser> Users{ get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItem { get; set; }
@@ -28,7 +28,7 @@ namespace PNET_semestralka_blazor_app.Data
             // [Agregace] Doručovací adresa patří zákazníkovi (1:N)
             modelBuilder.Entity<SendingAddress>()
                 .HasOne(sd => sd.Customer)
-                .WithMany(c => c.ShippingDetails)
+                .WithMany(c => c.SendingAddresses)
                 .HasForeignKey(sd => sd.CustomerId)
                 .OnDelete(DeleteBehavior.Cascade);
 
@@ -57,7 +57,6 @@ namespace PNET_semestralka_blazor_app.Data
                 .OnDelete(DeleteBehavior.NoAction); // Produkt nemaže položky objednávek
 
         }
-        public DbSet<PNET_semestralka_blazor_app.Models.Customer> Customer { get; set; } = default!;
     }
 }
 
