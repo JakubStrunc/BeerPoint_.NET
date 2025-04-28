@@ -35,8 +35,8 @@
                         <li><NavLink class="nav-link px-2 text-white" href="/orders">Objednávky</NavLink></li>
                         <li>
                             <button class="nav-link px-2 text-danger bg-transparent border-0"
-                                    @onclick="Logout"
-                                    @onclick:preventDefault>
+                                    @onclick=Logout
+                                    >
                                 Odhlásit se
                             </button>
                         </li>
@@ -48,8 +48,8 @@
                         <li><NavLink class="nav-link px-2 text-white" href="/orders-management">Správa Objednávek</NavLink></li>
                         <li>
                             <button class="nav-link px-2 text-danger bg-transparent border-0"
-                                    @onclick="Logout"
-                                    @onclick:preventDefault>
+                                    @onclick=Logout
+                                    >
                                 Odhlásit se
                             </button>
                         </li>
@@ -62,22 +62,20 @@
 
 
 @code {
-        private async Task Logout()
+    private async Task Logout()
+    {
+        try
         {
-            try
-            {
-                Console.WriteLine("Začínám logout");
+            Console.WriteLine("zacinam logout");
 
-                await SignInManager.SignOutAsync();
-                session.Clear();
+            await SignInManager.SignOutAsync();
+            session.Clear();
 
-                Console.WriteLine("Naviguju na Home");
-
-                Navigation.NavigateTo("/", forceLoad: true);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Chyba při logoutu: {ex.Message}");
-            }
+            Navigation.NavigateTo("/", forceLoad: true);
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"chyba pri logoutu: {ex.Message}");
+        }
+    }
 }

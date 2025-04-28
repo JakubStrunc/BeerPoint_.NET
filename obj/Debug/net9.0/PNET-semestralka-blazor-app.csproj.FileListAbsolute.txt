@@ -239,3 +239,4 @@ C:\Users\kubae\OneDrive\Dokumenty\PNET-semestralka-blazor-app\obj\Debug\net9.0\r
 C:\Users\kubae\OneDrive\Dokumenty\PNET-semestralka-blazor-app\obj\Debug\net9.0\PNET-semestralka-blazor-app.pdb
 C:\Users\kubae\OneDrive\Dokumenty\PNET-semestralka-blazor-app\obj\Debug\net9.0\PNET-semestralka-blazor-app.genruntimeconfig.cache
 C:\Users\kubae\OneDrive\Dokumenty\PNET-semestralka-blazor-app\obj\Debug\net9.0\ref\PNET-semestralka-blazor-app.dll
+C:\Users\kubae\OneDrive\Dokumenty\PNET-semestralka-blazor-app\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

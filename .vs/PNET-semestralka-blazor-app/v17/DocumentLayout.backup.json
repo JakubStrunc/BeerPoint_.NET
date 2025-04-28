@@ -174,19 +174,21 @@
               "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\PNET-semestralka-blazor-app.csproj",
               "RelativeToolTip": "PNET-semestralka-blazor-app.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-28T16:50:50.647Z"
+              "WhenOpened": "2025-04-28T16:50:50.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PNET-semestralka-blazor-app.csproj",
+              "Title": "PNET-semestralka-blazor-app",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\PNET-semestralka-blazor-app.csproj",
               "RelativeDocumentMoniker": "PNET-semestralka-blazor-app.csproj",
               "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\PNET-semestralka-blazor-app.csproj",
               "RelativeToolTip": "PNET-semestralka-blazor-app.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-28T16:50:23.706Z"
+              "WhenOpened": "2025-04-28T16:50:23.706Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -206,9 +208,9 @@
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAADQAAAAAAAAAAADgv0AAAAAdAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kubae\\OneDrive\\Dokumenty\\PNET-semestralka-blazor-app\\Components\\Layout\\NavMenu.razor*",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor*",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-23T07:39:33.896Z",
               "EditorCaption": ""

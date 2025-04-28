@@ -25,30 +25,31 @@ namespace PNET_semestralka_blazor_app.Components.Pages
 
         private async Task PridatDoKosiku(Product product)
         {
-            try
-            {
-                await HomeService.AddToCartAsync(session.UserEmail, product);
+            throw new NotImplementedException();
+            //try
+            //{
+            //    await HomeService.AddToCartAsync(session.UserEmail, product);
 
-                await JSRuntime.InvokeVoidAsync("Toastify", new
-                {
-                    text = $"{product.Nazev} pøidán do košíku",
-                    duration = 3000,
-                    close = true,
-                    gravity = "bottom",
-                    position = "right",
-                    backgroundColor = "linear-gradient(to right, #00b09b, #96c93d)",
-                    stopOnFocus = true
-                });
-            }
-            catch (Exception ex)
-            {
-                await JSRuntime.InvokeVoidAsync("Toastify", new
-                {
-                    text = $"Chyba: {ex.Message}",
-                    duration = 3000,
-                    backgroundColor = "linear-gradient(to right, #ff5f6d, #ffc371)"
-                });
-            }
+            //    await JSRuntime.InvokeVoidAsync("Toastify", new
+            //    {
+            //        text = $"{product.Nazev} pøidán do košíku",
+            //        duration = 3000,
+            //        close = true,
+            //        gravity = "bottom",
+            //        position = "right",
+            //        backgroundColor = "linear-gradient(to right, #00b09b, #96c93d)",
+            //        stopOnFocus = true
+            //    });
+            //}
+            //catch (Exception ex)
+            //{
+            //    await JSRuntime.InvokeVoidAsync("Toastify", new
+            //    {
+            //        text = $"Chyba: {ex.Message}",
+            //        duration = 3000,
+            //        backgroundColor = "linear-gradient(to right, #ff5f6d, #ffc371)"
+            //    });
+            //}
         }
     }
 }
